@@ -1,0 +1,18 @@
+# Gerado pela origem das suítes de QA.
+name: "QA / Conclusão do fluxo da jornada"
+on:
+  pull_request_target:
+  merge_group:
+permissions: {}
+jobs:
+  qa:
+    name: "QA / Conclusão do fluxo da jornada"
+    if: ${{ true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Executar tema de QA
+        uses: PROGIC-Tech/.github@qa-pre-merge
+        with:
+          theme: conclusao-jornada
+          repository: ${{ github.repository }}

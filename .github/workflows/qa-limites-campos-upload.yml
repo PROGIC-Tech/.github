@@ -1,0 +1,18 @@
+# Gerado pela origem das suítes de QA.
+name: "QA / Limites de campos ou upload"
+on:
+  pull_request_target:
+  merge_group:
+permissions: {}
+jobs:
+  qa:
+    name: "QA / Limites de campos ou upload"
+    if: ${{ true }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Executar tema de QA
+        uses: PROGIC-Tech/.github@qa-pre-merge
+        with:
+          theme: limites-campos-upload
+          repository: ${{ github.repository }}
