@@ -8,7 +8,9 @@ jobs:
   qa:
     name: "QA / Obstáculos ou comportamentos inconsistentes"
     if: ${{ true }}
-    runs-on: ubuntu-latest
+    runs-on:
+      group: Inteli QA pre-merge
+      labels: inteli-qa
     timeout-minutes: 5
     steps:
       - name: Executar tema de QA
